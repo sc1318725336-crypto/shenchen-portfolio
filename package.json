@@ -1,0 +1,21 @@
+{
+  "name": "shenchen-portfolio-lanyard",
+  "private": true,
+  "scripts": {
+    "build:lanyard": "esbuild src/lanyard-main.jsx --bundle --format=iife --outfile=assets/lanyard-plugin.js --loader:.glb=dataurl --loader:.png=dataurl --loader:.jpg=dataurl --jsx=automatic --minify",
+    "build:dome": "esbuild src/logo-dome-main.jsx --bundle --format=iife --outfile=assets/logo-dome-plugin.js --jsx=automatic --minify"
+  },
+  "dependencies": {
+    "@react-three/drei": "latest",
+    "@react-three/fiber": "latest",
+    "@react-three/rapier": "latest",
+    "@use-gesture/react": "10.3.1",
+    "meshline": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "three": "latest"
+  },
+  "devDependencies": {
+    "esbuild": "latest"
+  }
+}

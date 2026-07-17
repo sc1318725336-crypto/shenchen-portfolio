@@ -1,0 +1,19 @@
+.lanyard-wrapper {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1);
+  transform-origin: center;
+}
+
+/* Desktop canvas follows the enlarged, lowered card composition. */
+@media (min-width: 801px) {
+  .lanyard-wrapper {
+    height: clamp(47.5rem, 52vw, 52.5rem);
+  }
+}
+
