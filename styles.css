@@ -739,8 +739,7 @@ button.placeholder:hover,button.placeholder:focus-visible{filter:brightness(1.1)
   border-top:1px solid rgba(188,188,188,.65);
 }
 .event-menu-item{
-  display:grid;
-  grid-template-columns:17% 1fr;
+  display:flex;
   align-items:center;
   width:100%;
   height:5.85vw;
@@ -754,14 +753,20 @@ button.placeholder:hover,button.placeholder:focus-visible{filter:brightness(1.1)
   cursor:pointer;
   transition:background .22s ease,color .22s ease,border-color .22s ease;
 }
+.event-menu-label{
+  display:grid;
+  grid-template-columns:17% 1fr;
+  align-items:baseline;
+  width:100%;
+}
 .event-menu-item time{
   color:#bcbcbc;
   font:800 clamp(21px,1.65vw,34px)/1 Trap,Arial Black,sans-serif;
   letter-spacing:0;
   transition:color .22s ease;
 }
-.event-menu-item span{
-  font:800 clamp(17px,1.33vw,27px)/1.12 Harmony,Arial,sans-serif;
+.event-menu-item .event-menu-title{
+  font:800 clamp(17px,1.33vw,27px)/1 Harmony,Arial,sans-serif;
   letter-spacing:0;
 }
 .event-menu-item:hover,
@@ -814,7 +819,7 @@ button.placeholder:hover,button.placeholder:focus-visible{filter:brightness(1.1)
 @media(max-width:900px){
   .event{height:auto;min-height:900px;padding:96px 20px 80px;overflow:hidden}
   .event-title,.event-subtitle,.event-kicker,.event .icon-event,.event-copy,.event-card-rail,.event-menu,.event-more{position:relative;left:auto;right:auto;top:auto;width:auto}
-  .event-title{font-size:14vw;white-space:normal}.event-subtitle{margin-top:6px}.event-kicker{margin-top:34px}.event .icon-event{position:absolute;right:20px;top:96px;width:70px}.event-copy{margin-top:44px;font-size:18px}.event-card-rail{height:70vw;margin-top:42px}.event-menu{margin-top:36px}.event-menu-item{height:74px;grid-template-columns:72px 1fr;padding:0 16px}.event-more{margin-top:28px;width:max-content;height:46px}.event-more span{width:24px;min-width:24px}
+  .event-title{font-size:14vw;white-space:normal}.event-subtitle{margin-top:6px}.event-kicker{margin-top:34px}.event .icon-event{position:absolute;right:20px;top:96px;width:70px}.event-copy{margin-top:44px;font-size:18px}.event-card-rail{height:70vw;margin-top:42px}.event-menu{margin-top:36px}.event-menu-item{height:74px;padding:0 16px}.event-menu-label{grid-template-columns:72px 1fr}.event-more{margin-top:28px;width:max-content;height:46px}.event-more span{width:24px;min-width:24px}
 }
 /* Global panel rhythm — derived from the brand-build reference gap. */
 @media(min-width:801px){
