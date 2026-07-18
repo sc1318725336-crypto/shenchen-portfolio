@@ -5,6 +5,7 @@ const root = resolve(import.meta.dirname, "..");
 const output = resolve(root, "dist");
 
 const rootFiles = [
+  "_worker.js",
   "index.html",
   "project.html",
   "douyin-page.html",
