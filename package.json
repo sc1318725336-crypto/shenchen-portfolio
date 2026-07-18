@@ -3,7 +3,9 @@
   "private": true,
   "scripts": {
     "build:lanyard": "esbuild src/lanyard-main.jsx --bundle --format=iife --outfile=assets/lanyard-plugin.js --loader:.glb=dataurl --loader:.png=dataurl --loader:.jpg=dataurl --jsx=automatic --minify",
-    "build:dome": "esbuild src/logo-dome-main.jsx --bundle --format=iife --outfile=assets/logo-dome-plugin.js --jsx=automatic --minify"
+    "build:dome": "esbuild src/logo-dome-main.jsx --bundle --format=iife --outfile=assets/logo-dome-plugin.js --jsx=automatic --minify",
+    "build": "npm run build:lanyard && npm run build:dome && node scripts/build-site.mjs",
+    "deploy:cloudflare": "npm run build && node scripts/deploy-cloudflare.mjs"
   },
   "dependencies": {
     "@react-three/drei": "latest",
@@ -16,6 +18,7 @@
     "three": "latest"
   },
   "devDependencies": {
-    "esbuild": "latest"
+    "esbuild": "latest",
+    "wrangler": "^4.112.0"
   }
 }

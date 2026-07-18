@@ -4,6 +4,7 @@
 .vercel-cli/
 .vercel/
 node_modules/
+dist/
 _reference/
 .space-sync.*
 *-check.html
