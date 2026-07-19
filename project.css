@@ -18,8 +18,8 @@ a{color:inherit}
 .case-logo img{width:60px;height:auto}
 .case-path{margin:0;font-size:10px;color:#8f8f8b}
 .case-path span,.case-path b{color:var(--ink)}
-.case-back{justify-self:end;display:inline-flex;align-items:center;gap:12px;min-height:44px;padding:0 16px;border:1px solid rgba(255,255,255,.65);border-radius:999px;text-decoration:none;font-size:12px;transition:background .25s ease,color .25s ease,border-color .25s ease}
-.case-back:hover{background:var(--ink);border-color:var(--ink);color:#050505}
+.case-back{position:fixed;left:max(18px,env(safe-area-inset-left));bottom:max(18px,env(safe-area-inset-bottom));z-index:40;display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:0 18px;border-radius:999px;background:var(--ink);color:#050505;text-decoration:none;font-size:12px;transition:background .22s ease,color .22s ease,transform .22s cubic-bezier(.16,1,.3,1)}
+.case-back:hover{background:var(--lime);color:#050505;transform:translateY(-2px)}
 
 .case-hero{position:relative;max-width:var(--content);min-height:100svh;margin:0 auto;padding:clamp(138px,14vw,250px) var(--gutter) clamp(80px,9vw,160px)}
 .case-hero-heading{display:grid;grid-template-columns:minmax(50px,.3fr) 2.2fr .65fr;align-items:end;gap:clamp(16px,3vw,52px)}
@@ -109,7 +109,7 @@ a{color:inherit}
   .outcome-heading{grid-template-columns:1fr}.outcome-grid{grid-template-columns:1fr 1fr}.outcome-main{grid-column:1/-1;grid-row:auto;aspect-ratio:16/10}
 }
 @media(max-width:640px){
-  .case-nav{grid-template-columns:1fr auto;padding:14px 16px}.case-path{display:none}.case-logo{width:54px}.case-logo img{width:50px}.case-back{width:44px;padding:0;justify-content:center;font-size:0}.case-back span{font-size:16px}
+  .case-nav{grid-template-columns:1fr auto;padding:14px 16px}.case-path{display:none}.case-logo{width:54px}.case-logo img{width:50px}.case-back{width:48px;padding:0;justify-content:center;font-size:0}.case-back span{font-size:16px}
   .case-hero{padding-top:132px}.case-hero-heading{display:block}.case-count{margin:0 0 28px}.case-hero h1{font-size:20vw;white-space:nowrap}.case-title-row{margin-top:72px}
   .case-cover{aspect-ratio:4/5}.case-cover figcaption span:last-child{display:none}
   .case-facts{grid-template-columns:1fr 1fr}.case-facts div:nth-child(3){border-left:0}.case-facts div+div{padding-left:12px}.case-facts div:nth-child(n+3){border-top:1px solid var(--line)}

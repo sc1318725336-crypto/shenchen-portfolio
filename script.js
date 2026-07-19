@@ -4,6 +4,7 @@ const siteLogo = document.querySelector('.site-logo');
 const menuPanel = document.querySelector('.menu-panel');
 const menuBackdrop = document.querySelector('.menu-backdrop');
 const menuLinks = [...document.querySelectorAll('.menu-list a')];
+const contactShortcut = document.querySelector('.contact-shortcut');
 const progress = document.querySelector('.scroll-progress span');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
@@ -171,6 +172,7 @@ menuButton?.addEventListener('click', () => setMenu(!menuOpen));
 menuBackdrop?.addEventListener('click', () => setMenu(false));
 siteLogo?.addEventListener('click', () => { if (menuOpen) setMenu(false, false); });
 menuLinks.forEach((link) => link.addEventListener('click', () => setMenu(false, false)));
+contactShortcut?.addEventListener('click', () => setMenu(false, false));
 
 document.addEventListener('keydown', (event) => {
   if (!menuOpen) return;
@@ -859,7 +861,8 @@ if (eventBrowser) {
     menuItems.forEach((item, index) => {
       const selected = index === activeEventIndex;
       item.classList.toggle('is-active', selected);
-      item.setAttribute('aria-selected', String(selected));
+      if (selected) item.setAttribute('aria-current', 'true');
+      else item.removeAttribute('aria-current');
     });
   };
 
@@ -932,7 +935,9 @@ if (eventBrowser) {
   }, true);
 
   menuItems.forEach((item) => {
-    item.addEventListener('click', () => setEventIndex(Number(item.dataset.eventProject)));
+    const previewProject = () => setEventIndex(Number(item.dataset.eventProject));
+    item.addEventListener('pointerenter', previewProject);
+    item.addEventListener('focus', previewProject);
   });
 
   window.addEventListener('resize', () => renderEventCards(0, false));

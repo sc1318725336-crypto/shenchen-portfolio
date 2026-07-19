@@ -1,4 +1,4 @@
-﻿param(
+param(
   [string]$FeaturedSource = 'G:\作品集\作品\主页活动设计',
   [string]$ArchiveSource = 'G:\作品集\作品\活动设计',
   [string]$WorkspaceRoot = (Split-Path -Parent $PSScriptRoot)
@@ -125,7 +125,7 @@ function Write-ProjectSet($Projects, [string]$Group, [string]$BackHref, [string]
     <meta name="theme-color" content="#050505" />
     <meta name="description" content="$name 活动设计项目完整展示" />
     <title>$name｜活动设计项目</title>
-    <link rel="stylesheet" href="../../../../event-project.css?v=20260716-event1" />
+    <link rel="stylesheet" href="../../../../event-project.css?v=20260719-nav1" />
   </head>
   <body>
     <a class="skip-link" href="#project-content">跳到项目内容</a>
@@ -176,7 +176,7 @@ $archiveHtml = @"
     <meta name="theme-color" content="#050505" />
     <meta name="description" content="活动设计更多案例作品集" />
     <title>更多活动设计案例</title>
-    <link rel="stylesheet" href="../../event-archive.css?v=20260717-event3" />
+    <link rel="stylesheet" href="../../event-archive.css?v=20260719-nav1" />
   </head>
   <body>
     <nav class="archive-topbar"><a class="archive-back" href="../../index.html#event">← 返回活动设计</a><span class="archive-index">10 PROJECTS</span></nav>

@@ -1,4 +1,4 @@
-﻿param(
+param(
   [string]$SourceRoot = 'G:\作品集\作品\品牌设计',
   [string]$WorkspaceRoot = (Split-Path -Parent $PSScriptRoot)
 )
@@ -163,7 +163,7 @@ for ($projectIndex = 0; $projectIndex -lt $projectCount; $projectIndex++) {
     <meta name="theme-color" content="#050505" />
     <meta name="description" content="$encodedName 品牌设计项目完整展示" />
     <title>$encodedName｜品牌设计项目</title>
-    <link rel="stylesheet" href="../../../brand-project.css?v=20260716-brand1" />
+    <link rel="stylesheet" href="../../../brand-project.css?v=20260719-nav1" />
   </head>
   <body>
     <a class="skip-link" href="#project-content">跳到项目内容</a>

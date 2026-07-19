@@ -19,7 +19,7 @@ a{color:inherit}
 .skip-link:focus{transform:none}
 
 .project-topbar{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;min-height:72px;padding:0 var(--gutter);border-bottom:1px solid var(--line);font-size:.82rem}
-.project-back{display:inline-flex;align-items:center;gap:10px;min-height:44px;text-decoration:none}
+.project-back{position:fixed;left:max(18px,env(safe-area-inset-left));bottom:max(18px,env(safe-area-inset-bottom));z-index:40;display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 18px;border-radius:999px;background:var(--ink);color:#050505;text-decoration:none;transition:background .22s ease,color .22s ease,transform .22s cubic-bezier(.16,1,.3,1)}
 .project-back span{font-size:1.2rem;transition:transform .28s cubic-bezier(.16,1,.3,1)}
 .project-position{color:var(--muted);font:800 .78rem/1 Trap,Arial Black,sans-serif}
 
@@ -41,7 +41,8 @@ a{color:inherit}
 .project-back:focus-visible,.project-pagination a:focus-visible{outline:3px solid var(--lime);outline-offset:4px}
 
 @media(hover:hover){
-  .project-back:hover span{transform:translateX(-5px)}
+  .project-back:hover{background:var(--lime);transform:translateY(-2px)}
+  .project-back:hover span{transform:translateX(-4px)}
   .project-pagination a:hover{background:var(--lime);color:#050505}
   .project-pagination a:hover span{color:#050505}
 }
