@@ -1,8 +1,8 @@
-@import url("./brand-project.css?v=20260719-nav1");
+@import url("./brand-project.css?v=20260719-controls1");
 :root{--space-violet:#873dff}
 .project-kicker{color:var(--space-violet)}
 .project-header{position:relative;overflow:hidden}
 .project-header::after{content:"SPACE";position:absolute;right:var(--gutter);bottom:-.16em;color:#101010;font:800 clamp(6rem,18vw,22rem)/.8 Trap,Arial Black,sans-serif;letter-spacing:-.07em;pointer-events:none}
 .project-header>*{position:relative;z-index:1}
-.project-back:focus-visible,.project-pagination a:focus-visible{outline-color:var(--space-violet)}
+.project-pagination a:focus-visible{outline-color:var(--space-violet)}
 @media(hover:hover){.project-pagination a:hover{background:var(--space-violet);color:#fff}.project-pagination a:hover span{color:#fff}}

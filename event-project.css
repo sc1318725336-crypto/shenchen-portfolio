@@ -1,4 +1,4 @@
-@import url("./brand-project.css?v=20260719-nav1");
+@import url("./brand-project.css?v=20260719-controls1");
 
 :root{--event-pink:#ff3bc8}
 .project-kicker{color:var(--event-pink)}
@@ -6,4 +6,4 @@
 .project-header::after{content:"EVENT";position:absolute;right:var(--gutter);bottom:-.13em;z-index:-1;color:#111;font:800 clamp(6rem,18vw,20rem)/.75 Trap,Arial Black,sans-serif;letter-spacing:-.04em}
 .project-frame{border-radius:clamp(8px,.8vw,14px)}
 .project-pagination a:hover{background:var(--event-pink)}
-.project-back:focus-visible,.project-pagination a:focus-visible{outline-color:var(--event-pink)}
+.project-pagination a:focus-visible{outline-color:var(--event-pink)}
